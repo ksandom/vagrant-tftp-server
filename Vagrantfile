@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   # assigned by DHCP
   #config.vm.network "public_network"
   # assigned by static
-  config.vm.network "public_network", ip:"192.168.10.233/16"
+  config.vm.network "public_network", ip:"192.168.10.233", netmask:"255.255.0.0"
 
   config.vm.synced_folder "./conf", "/tftpboot", mount_options: ['dmode=777','fmode=755']
 
